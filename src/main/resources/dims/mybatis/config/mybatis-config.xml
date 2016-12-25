@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+   
+<configuration>
+    
+    <settings>
+        <setting name="cacheEnabled" value="true"/>
+      <setting name="useGeneratedKeys" value="true"/>
+      <setting name="defaultExecutorType" value="REUSE"/>
+      <setting name="mapUnderscoreToCamelCase" value="true"/>
+        
+<!--       <setting name="lazyLoadingEnabled" value="true"/> -->
+<!--       <setting name="multipleResultSetsEnabled" value="true"/> -->
+<!--       <setting name="useColumnLabel" value="true"/> -->
+<!--       <setting name="autoMappingBehavior" value="PARTIAL"/> -->
+<!--       <setting name="defaultStatementTimeout" value="25"/> -->
+<!--       <setting name="safeRowBoundsEnabled" value="false"/> -->
+<!--       <setting name="localCacheScope" value="SESSION"/> -->
+<!--       <setting name="jdbcTypeForNull" value="OTHER"/> -->
+<!--       <setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString"/> -->
+    </settings>
+    
+    
+<!--     <typeAliases>
+         <typeAlias type="kr.co.openit.bebecheck.cms.temperature.vo.TemperatureVO" alias="TemperatureVO"/>
+         <typeAlias type="kr.co.openit.bebecheck.cms.user.vo.UserVO" alias="UserVO"/>
+         <typeAlias type="kr.co.openit.bebecheck.cms.user.vo.BabyVO" alias="BabyVO"/>
+         <typeAlias type="kr.co.openit.bebecheck.cms.user.vo.UserMobileVO" alias="UserMobileVO"/>
+         <typeAlias type="kr.co.openit.bebecheck.cms.nursing.vo.NursingVO" alias="NursingVO"/>
+         <typeAlias type="kr.co.openit.bebecheck.cms.admin.vo.AdminVO" alias="AdminVO"/>
+         <typeAlias type="kr.co.openit.bebecheck.cms.defecation.vo.DefecationVO" alias="DefecationVO"/>
+         <typeAlias type="kr.co.openit.bebecheck.cms.medicine.vo.MedicineVO" alias="MedicineVO"/>
+         <typeAlias type="kr.co.openit.bebecheck.cms.diary.vo.DiaryVO" alias="DiaryVO"/>
+         <typeAlias type="kr.co.openit.bebecheck.cms.inquiry.vo.InquiryVO" alias="InquiryVO"/>
+         <typeAlias type="kr.co.openit.bebecheck.cms.event.vo.EventVO" alias="EventVO" />
+   </typeAliases>
+   
+   
+    <plugins>
+      <plugin interceptor="kr.co.openit.bebecheck.common.interceptor.MybatisCustomInterceptor"></plugin>
+   </plugins> -->
+   
+</configuration>

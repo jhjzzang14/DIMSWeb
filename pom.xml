@@ -165,6 +165,13 @@
             <artifactId>sitemesh</artifactId>
             <version>2.4.2</version>
         </dependency>
+        
+        <!-- mysql -->
+      <dependency>
+         <groupId>mysql</groupId>
+         <artifactId>mysql-connector-java</artifactId>
+         <version>5.1.18</version>
+      </dependency>
 	</dependencies>
     <build>
         <plugins>
