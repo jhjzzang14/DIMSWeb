@@ -8,18 +8,16 @@
 		<title><decorator:title default="▒ DIMS Web JavaHolic co.ltd,. ▒ "/></title>
 		<decorator:head/>
 		
-		<link href="<c:url value="/assets/css/bootstrap.css"/>" rel="stylesheet">
 		<link href="<c:url value="/assets/css/bootstrap.min.css"/>" rel="stylesheet">
-		<link href="<c:url value="/assets/css/app.css"/>" rel="stylesheet">
-		
+		<link href='<c:url value="/assets/css/bootstrap-drawer.min.css"/>' rel="stylesheet">
 	</head>
 	
 	
-	<body>
-		<page:applyDecorator page="/WEB-INF/views/global/header.jsp" name="header"/>
-		
-		<decorator:body/>
-		
-		<page:applyDecorator page="/WEB-INF/views/global/footer.jsp" name="footer"/>		
+	<body class="has-drawer" style="padding-top: 90px;">
+		<page:applyDecorator name="header"/>
+		<div class="container">
+			<decorator:body/>
+		</div>
+		<page:applyDecorator name="footer"/>		
 	</body>
 </html>

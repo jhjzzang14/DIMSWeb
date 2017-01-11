@@ -1,0 +1,30 @@
+@CHARSET "EUC-KR";
+.navigation {
+	margin : 0px;
+	padding-left : 8px;
+	padding-right : 8px;
+	height : 80px;
+	background-color : #2196F3;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+	vertical-align: middle;
+}
+
+.navigation ul {
+	margin : 0px;
+	padding : 0px;
+	list-style-type : none;
+}
+
+.navigation li {
+	display: inline;
+	margin-right : 15px;
+	font-size: 30px;
+	color: white;
+}
+
+.navigation li a {
+	color: white;
+}
