@@ -10,6 +10,7 @@
 		
 		<link href="<c:url value="/assets/css/bootstrap.css"/>" rel="stylesheet">
 		<link href="<c:url value="/assets/css/bootstrap.min.css"/>" rel="stylesheet">
+		<link href="<c:url value="/assets/css/app.css"/>" rel="stylesheet">
 		
 	</head>
 	
