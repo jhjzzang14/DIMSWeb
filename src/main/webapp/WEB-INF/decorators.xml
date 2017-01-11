@@ -7,7 +7,7 @@
         <pattern>/mobile/*</pattern>
     </excludes>
     <decorator name="layout" page="global/layout.jsp">
-        <pattern>/blog/preview</pattern>
+        <pattern>/*</pattern>
     </decorator>
     <decorator name="header" page="global/header.jsp" />
     <decorator name="footer" page="global/footer.jsp" />     
