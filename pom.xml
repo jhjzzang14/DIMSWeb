@@ -12,6 +12,7 @@
 		<org.springframework-version>4.3.4.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.7.10</org.slf4j-version>
+		<spring-framework.security.version>3.2.9.RELEASE</spring-framework.security.version>
 	</properties>
 	<dependencies>
 		<!-- Spring -->
@@ -29,6 +30,11 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
 				
@@ -166,12 +172,31 @@
             <version>2.4.2</version>
         </dependency>
         
-        <!-- mysql -->
+      <!-- mysql -->
       <dependency>
          <groupId>mysql</groupId>
          <artifactId>mysql-connector-java</artifactId>
          <version>5.1.18</version>
       </dependency>
+      
+      <!-- Security -->
+      <dependency>
+	    <groupId>org.springframework.security</groupId>
+	    <artifactId>spring-security-web</artifactId>
+	    <version>${spring-framework.security.version}</version>
+	  </dependency>
+	  <dependency>
+	    <groupId>org.springframework.security</groupId>
+	    <artifactId>spring-security-config</artifactId>
+	    <version>${spring-framework.security.version}</version>
+	  </dependency>
+	  <dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-taglibs</artifactId>
+		<version>${spring-framework.security.version}</version>
+	  </dependency>
+      
+      
 	</dependencies>
     <build>
         <plugins>

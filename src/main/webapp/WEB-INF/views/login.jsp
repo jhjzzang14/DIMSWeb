@@ -13,9 +13,9 @@
 </head>
 <body>
 <div class="container">
-		<div class="card-header text-center">
+		<!-- <div class="card-header text-center">
 	  		Login
-		</div>
+		</div> -->
 		
 		<div class="card card-container">
 			<!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
