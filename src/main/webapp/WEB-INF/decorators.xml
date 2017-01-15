@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <decorators defaultdir="/WEB-INF/views">
-    <excludes>
-        <pattern>/</pattern>
-        <pattern>/login</pattern>
-        <pattern>/sample/login.json</pattern>
-        <pattern>/sample/userlistif</pattern>
-        <pattern>/mobile/*</pattern>
+	<excludes>
+		<pattern>/</pattern>
+		<pattern>/login</pattern>
+		<pattern>/mobile/*</pattern>
     </excludes>
+    
     <decorator name="layout" page="global/layout.jsp">
         <pattern>/*</pattern>
     </decorator>
+    
     <decorator name="header" page="global/header.jsp" />
+    
     <decorator name="footer" page="global/footer.jsp" />     
 </decorators>

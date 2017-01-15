@@ -1,7 +1,5 @@
 package com.javaholic.dims;
 
-import java.text.DateFormat;
-import java.util.Date;
 import java.util.Locale;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -21,14 +19,14 @@ public class HomeController {
 	@Autowired
 	SqlSessionTemplate s;
 	
-	@RequestMapping(value = {"/", "/login"} , method = RequestMethod.GET)
+	@RequestMapping(value = "/login" , method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 			
 			
 		return "login";
 	}
 	
-	@RequestMapping(value = "/home", method = RequestMethod.GET)
+	@RequestMapping(value = {"/", "/home"}, method = RequestMethod.GET)
 	public String home() {
 		return "home";
 	}

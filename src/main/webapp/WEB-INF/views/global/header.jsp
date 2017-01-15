@@ -5,12 +5,12 @@
 	<div class="pull-left" style="padding-top : 19px;">
 		<ul>
 			<li><a href="#main-menu" data-toggle="drawer" aria-foldedopen="false" aria-controls="main-menu"><span class="glyphicon glyphicon-menu-hamburger clickable main-menu"></span></a></li>
-			<li><a href="#" class="nav-title"><b>기숙사 정보관리 시스템</b></a></li>
+			<li><a href="<c:url value="/"/>" class="nav-title"><b>기숙사 정보관리 시스템</b></a></li>
 		</ul>
 	</div>
 	<div class="pull-right clearfix" style="padding-top: 7px;">
 		<div class="pull-left" style="margin-right: 10px;">
-			<img src="a" alt="프사영역" style="width: 64px; height: 64px;">
+			<img src="<c:url value="/img/logo.png"/>" alt="프사영역" style="width: 64px; height: 64px;">
 		</div>
 		<div class="pull-left" style="padding-top: 7px;">
 			<span style="font-size: 20px;"><strong>ㅁㅁㅁ</strong></span>님 <span class="badge" style="background-color: #b94a48;">5</span>
@@ -23,7 +23,7 @@
         <div class="drawer-heading" style="background-color: #2196F3;">
            	<div style="padding-left: 10px;">
            		<h2><a style="color:white;" href="#main-menu" data-toggle="drawer" aria-foldedopen="false" aria-controls="main-menu"><span class="glyphicon glyphicon-menu-hamburger clickable"></span></a><span style="font-size: 30px; margin-left: 10px;">
-	           	<a href="#" style="color:white;"><b>기숙사 정보관리 시스템</b></a></span></h2>
+	           	<a href="<c:url value="/"/>" style="color:white;"><b>기숙사 정보관리 시스템</b></a></span></h2>
            	</div>
            	<div style="padding-left:10px; padding-bottom:10px; margin-top: 15px;">
 
