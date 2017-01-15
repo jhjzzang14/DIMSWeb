@@ -22,7 +22,9 @@
 <!--       <setting name="jdbcTypeForNull" value="OTHER"/> -->
 <!--       <setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString"/> -->
     </settings>
-    
+    <typeAliases>
+    	<typeAlias type="com.javaholic.dims.dims.user.vo.UserVO" alias="UserVO"/>
+    </typeAliases>
     
 <!--     <typeAliases>
          <typeAlias type="kr.co.openit.bebecheck.cms.temperature.vo.TemperatureVO" alias="TemperatureVO"/>
