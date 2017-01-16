@@ -2,6 +2,8 @@ package com.javaholic.dims;
 
 import java.util.Locale;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,13 +23,12 @@ public class HomeController {
 	
 	@RequestMapping(value = "/login" , method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-			
-			
 		return "login";
 	}
 	
 	@RequestMapping(value = {"/", "/home"}, method = RequestMethod.GET)
-	public String home() {
+	public String home(HttpServletRequest request) {
+		logger.info("{}",request.getServletPath());
 		return "home";
 	}
 	

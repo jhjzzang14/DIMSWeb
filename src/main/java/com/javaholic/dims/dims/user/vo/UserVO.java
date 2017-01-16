@@ -6,7 +6,7 @@ public class UserVO {
 	
 	private int userSeq;
 	private String userName;
-	private Timestamp userCreateAt;
+	private Timestamp userBirth;
 	private String userId;
 	private String userPassword;
 	private Timestamp userInsDate;
@@ -23,14 +23,14 @@ public class UserVO {
 	
 	public UserVO(){}
 
-	public UserVO(int userSeq, String userName, Timestamp userCreateAt, String userId, String userPassword,
+	public UserVO(int userSeq, String userName, Timestamp userBirth, String userId, String userPassword,
 			Timestamp userInsDate, Timestamp userUdtDate, String userDelYn, String userTypeAs, String userEmail,
 			String userPhone, String userAddress, String userProfile, String dptSeq, String userGenderMw,
 			int userGrade) {
 		super();
 		this.userSeq = userSeq;
 		this.userName = userName;
-		this.userCreateAt = userCreateAt;
+		this.userBirth = userBirth;
 		this.userId = userId;
 		this.userPassword = userPassword;
 		this.userInsDate = userInsDate;
@@ -62,12 +62,12 @@ public class UserVO {
 		this.userName = userName;
 	}
 
-	public Timestamp getUserCreateAt() {
-		return userCreateAt;
+	public Timestamp getUserBirth() {
+		return userBirth;
 	}
 
-	public void setUserCreateAt(Timestamp userCreateAt) {
-		this.userCreateAt = userCreateAt;
+	public void setUserBirth(Timestamp userBirth) {
+		this.userBirth = userBirth;
 	}
 
 	public String getUserId() {
@@ -176,7 +176,7 @@ public class UserVO {
 
 	@Override
 	public String toString() {
-		return "UserVo [userSeq=" + userSeq + ", userName=" + userName + ", userCreateAt=" + userCreateAt + ", userId="
+		return "UserVO [userSeq=" + userSeq + ", userName=" + userName + ", userBirth=" + userBirth + ", userId="
 				+ userId + ", userPassword=" + userPassword + ", userInsDate=" + userInsDate + ", userUdtDate="
 				+ userUdtDate + ", userDelYn=" + userDelYn + ", userTypeAs=" + userTypeAs + ", userEmail=" + userEmail
 				+ ", userPhone=" + userPhone + ", userAddress=" + userAddress + ", userProfile=" + userProfile

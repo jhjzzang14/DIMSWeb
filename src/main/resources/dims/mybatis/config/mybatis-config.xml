@@ -24,6 +24,7 @@
     </settings>
     <typeAliases>
     	<typeAlias type="com.javaholic.dims.dims.user.vo.UserVO" alias="UserVO"/>
+    	<typeAlias type="com.javaholic.dims.dims.user.vo.DepartmentVO" alias="DepartmentVO"/>
     </typeAliases>
     
 <!--     <typeAliases>
