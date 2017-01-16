@@ -15,9 +15,12 @@
 	
 	<body class="has-drawer" style="padding-top: 90px;">
 		<page:applyDecorator name="header"/>
+		
 		<div class="container">
 			<decorator:body/>
 		</div>
+		
+		
 		<page:applyDecorator name="footer"/>		
 	</body>
 </html>

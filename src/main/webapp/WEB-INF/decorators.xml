@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <decorators defaultdir="/WEB-INF/views">
 	<excludes>
-		<pattern>/</pattern>
 		<pattern>/login</pattern>
 		<pattern>/mobile/*</pattern>
     </excludes>
