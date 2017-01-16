@@ -8,4 +8,16 @@
 		
 	</insert>
 	
+	
+	<select id="selectUserInfo" resultType="UserVO">
+		SELECT USER_ID,
+			   USER_PASSWORD,
+			   USER_SEQ,
+			   USER_NAME,
+			   USER_TYPE_AS
+		  FROM dims_user
+		 WHERE USER_ID = #{userId} 
+	</select>
+	
+	
 </mapper>

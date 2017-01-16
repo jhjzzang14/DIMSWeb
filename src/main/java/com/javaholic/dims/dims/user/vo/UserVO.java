@@ -1,8 +1,16 @@
 package com.javaholic.dims.dims.user.vo;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
-public class UserVO {
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import com.javaholic.dims.common.security.Authority;
+
+public class UserVO implements UserDetails{
 	
 	private int userSeq;
 	private String userName;
@@ -181,6 +189,51 @@ public class UserVO {
 				+ userUdtDate + ", userDelYn=" + userDelYn + ", userTypeAs=" + userTypeAs + ", userEmail=" + userEmail
 				+ ", userPhone=" + userPhone + ", userAddress=" + userAddress + ", userProfile=" + userProfile
 				+ ", dptSeq=" + dptSeq + ", userGenderMw=" + userGenderMw + ", userGrade=" + userGrade + "]";
+	}
+
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		
+		Authority authority = new Authority();
+		List<Authority> list = new ArrayList<Authority>();
+		list.add(authority);
+		return list;
+	}
+
+	@Override
+	public String getPassword() {
+		
+		return userPassword;
+	}
+
+	@Override
+	public String getUsername() {
+		// TODO Auto-generated method stub
+		return userId;
+	}
+
+	@Override
+	public boolean isAccountNonExpired() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public boolean isAccountNonLocked() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public boolean isCredentialsNonExpired() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public boolean isEnabled() {
+		// TODO Auto-generated method stub
+		return true;
 	}
 	
 }

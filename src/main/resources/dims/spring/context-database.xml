@@ -25,7 +25,7 @@
 	</bean>
 	
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.javaholic.dims.dims"/>
+		<property name="basePackage" value="com.javaholic.dims"/>
 		<property name="annotationClass" value="org.springframework.stereotype.Repository"/>
 	</bean>
 
