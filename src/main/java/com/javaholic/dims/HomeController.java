@@ -17,24 +17,12 @@ public class HomeController {
 	
 	@RequestMapping(value = "/login" , method = RequestMethod.GET)
 	public String login(HttpServletRequest request,HttpServletResponse response) throws IOException {
-			
-		
 		return "login";	
 	}
 	
-	@RequestMapping(value = "/" , method = RequestMethod.GET)
-	public void url(HttpServletRequest request,HttpServletResponse response) throws IOException {
-			
-		
-		response.sendRedirect("/login");
-	}
-	
-	@RequestMapping(value =  "/home", method = RequestMethod.GET)
-	public String home() {
-
+	@RequestMapping(value = {"/", "/home"}, method = RequestMethod.GET)
+	public String url(HttpServletRequest request,HttpServletResponse response) throws IOException {
 		return "home";
 	}
-	
-	
-	
+
 }

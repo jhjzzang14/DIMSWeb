@@ -29,19 +29,6 @@ public class UserController {
 	@Autowired
 	private DepartmentService dptService;
 	
-	/* 로그인은 너가 알아서 바꾸렴 영훈아 */
-	@RequestMapping(value="/login", method=RequestMethod.POST)
-	@ResponseBody
-	public CommonResponseVO login(UserVO user, HttpSession session) {
-		CommonResponseVO vo = new CommonResponseVO();
-		vo.setCode(1);
-		session.setAttribute("user", user);
-		
-		logger.info("{}",vo);
-		
-		return vo;
-	}
-	
 	/* 호준이 안드로이드 세션 테스트  */
 	@RequestMapping("/login/test")
 	@ResponseBody

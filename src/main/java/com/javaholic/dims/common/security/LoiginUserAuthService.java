@@ -21,19 +21,13 @@ public class LoiginUserAuthService implements UserDetailsService{
 	
 	@Override
 	public UserDetails loadUserByUsername(String userId) throws UsernameNotFoundException {
-		// TODO Auto-generated method stub'
-		
 		logger.info(userId);
 		
 		UserVO user = userDAO.selectUserInfo(userId);
 		
+		if (user == null) throw new UsernameNotFoundException("userName NotFound");
+		
 		logger.info(user.toString());
-		
-		if (user == null){
-			throw new UsernameNotFoundException("userName NotFound");
-		} 
-		
-	
 			
 		return user;
 	}

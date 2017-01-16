@@ -10,6 +10,7 @@
 		<link href="<c:url value="/assets/css/login/login.css"/>" rel="stylesheet">
 		<link href="<c:url value="/assets/css/bootstrap.min.css"/>" rel="stylesheet">
 		<link href='<c:url value="/assets/css/bootstrap-drawer.min.css"/>' rel="stylesheet">
+		<link href="<c:url value="/assets/vendors/sweet-alert/sweet-alert.min.css"/>" rel="stylesheet">
 		
 <script>
 	
@@ -21,9 +22,19 @@
 			dataTyp : 'json',
 			data : $('.form-signin').serialize() ,
 			success : function(data){
-				
 				console.dir(data);
 				
+				var code = data.code;
+				var vo = data.responseVo;
+				
+				if(code==1)
+				{
+					location.href = '/home';
+				}
+				else
+				{
+					swal('','아이디 또는 비밀번호를 확인하세요.','error');
+				}
 			}
 		})
 	});
@@ -53,10 +64,11 @@
 				<button class="btn btn-lg btn-primary btn-block btn-signin submit" type="button">Sign in</button>
 				<button class="btn btn-lg btn-primary btn-block btn-signin" type="button">Password Find</button>
 			</form><!-- /form -->
-			<a href="#" class="forgot-password">
-				Forgot the password?
+			<a href="<c:url value="/user/register"/>" class="forgot-password">
+				회원가입
 			</a>
 		</div><!-- /card-container -->
 </div><!-- /container -->
+<script src="<c:url value="/assets/vendors/sweet-alert/sweet-alert.min.js"/>"></script>
 </body>
 </html>

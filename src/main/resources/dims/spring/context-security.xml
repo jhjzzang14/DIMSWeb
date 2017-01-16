@@ -11,9 +11,8 @@
 
 	<bean id="loginFailHandler" class="com.javaholic.dims.common.security.LoginFailHandler"></bean>
 	
-	<sec:http pattern="/" security="none"></sec:http>
 	<sec:http pattern="/login" security="none"></sec:http>
-	<sec:http pattern="/join" security="none"></sec:http>
+	<sec:http pattern="/user/register" security="none"></sec:http>
 	<sec:http pattern="/assets/**" security="none"></sec:http>
 	<sec:http pattern="/img/**" security="none"></sec:http>
 	<sec:http pattern="/javascripts/**" security="none"></sec:http>

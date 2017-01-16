@@ -8,19 +8,19 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	
-	
 	<h1>Home</h1>
-	<p>
-		/, /home
-	</p>
-	
-	학번 ${userVo.userId} <br/>
-	이름 ${userVo.userName} <br/>
-	학과 ${userVo.dptName} <br/>
-	유저타입  ${userVo.userTypeAs} <br/>
-	세션 <%= request.getSession().getAttribute("userVo") %>
+	<c:choose>
+		<c:when test="${userVo.userTypeAs eq 'A'}">
+			학번 ${userVo.userId} <br/>
+			이름 ${userVo.userName} <br/>
+			관리자등급
+		</c:when>
+		<c:otherwise>
+			학번 ${userVo.userId} <br/>
+			이름 ${userVo.userName} <br/>
+			학과 ${userVo.dptName} <br/>
+		</c:otherwise>
+	</c:choose>
 	
 	<h1>화면이동</h1>
 	<ul>
