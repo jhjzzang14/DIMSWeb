@@ -1,3 +1,4 @@
+<%@page import="org.springframework.web.context.annotation.RequestScope"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -7,10 +8,19 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+	
+	
 	<h1>Home</h1>
 	<p>
 		/, /home
 	</p>
+	
+	학번 ${userVo.userId} <br/>
+	이름 ${userVo.userName} <br/>
+	학과 ${userVo.dptName} <br/>
+	유저타입  ${userVo.userTypeAs} <br/>
+	세션 <%= request.getSession().getAttribute("userVo") %>
 	
 	<h1>화면이동</h1>
 	<ul>

@@ -6,29 +6,33 @@
      http://www.springframework.org/schema/beans/spring-beans.xsd
      http://www.springframework.org/schema/security
      http://www.springframework.org/schema/security/spring-security.xsd">
-
-    <!-- 
 	
 	<bean id="loginSuccessHandler" class="com.javaholic.dims.common.security.LoginSuccessHandler"></bean>
 
 	<bean id="loginFailHandler" class="com.javaholic.dims.common.security.LoginFailHandler"></bean>
 	
-	<sec:http pattern="/login" security="none"></sec:http> 
+	<sec:http pattern="/" security="none"></sec:http>
+	<sec:http pattern="/login" security="none"></sec:http>
+	<sec:http pattern="/join" security="none"></sec:http>
+	<sec:http pattern="/assets/**" security="none"></sec:http>
+	<sec:http pattern="/img/**" security="none"></sec:http>
+	<sec:http pattern="/javascripts/**" security="none"></sec:http>
+
 	
 	<sec:http auto-config="true" use-expressions="true" pattern="/**"  authentication-manager-ref="authenticationManager" >
 		<sec:intercept-url pattern="/**" access="hasRole('ROLE_USER')" /> 
-		<sec:form-login login-page="/home" 
+		<sec:form-login login-page="/login" 
 		username-parameter="userId" 
-		password-parameter="userPass" 
+		password-parameter="userPassword" 
 		authentication-success-handler-ref="loginSuccessHandler"
-		authentication-failure-handler-ref="loginFailHandler"/>
+		authentication-failure-handler-ref="loginFailHandler"
+		login-processing-url="/logincheck"/>
 		<sec:logout/> 
 	</sec:http>
 	
-	
+
 	<sec:authentication-manager id="authenticationManager" alias="authenticationManager" >
-         <sec:authentication-provider user-service-ref="loginUserAuthService">
-         </sec:authentication-provider>
-    </sec:authentication-manager>  -->
+		<sec:authentication-provider user-service-ref="loginUserAuthServices"></sec:authentication-provider>
+    </sec:authentication-manager> 
 
 </beans>

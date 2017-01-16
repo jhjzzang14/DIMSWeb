@@ -23,10 +23,13 @@
 	
 	<body>
 		<page:applyDecorator name="header"/>
+		
 		<page:applyDecorator name="aside-left"/>
+
 		<div class="container">
 			<decorator:body/>
 		</div>
+		
 		<page:applyDecorator name="footer"/>		
 	</body>
 </html>
