@@ -16,7 +16,7 @@
 	<ul>
 		<li><a href="<c:url value="/"/>">홈</a></li>
 		<li><a href="<c:url value="/login"/>">로그인</a></li>
-		<li><a href="<c:url value="/join"/>">회원가입</a></li>
+		<li><a href="<c:url value="/user/register"/>">회원가입</a></li>
 	</ul>
 </body>
 </html>

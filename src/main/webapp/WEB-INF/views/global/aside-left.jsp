@@ -6,7 +6,7 @@
             <div class="profile-menu">
                 <a href="">
                     <div class="profile-pic">
-                        <img src="img/profile-pics/1.jpg" alt="">
+                        <img src="<c:url value="/assets/img/profile-pics/1.jpg"/>" alt="">
                     </div>
                     
                     <div class="profile-info">
