@@ -14,27 +14,29 @@ public class UserVO implements UserDetails{
 	
 	private int userSeq;
 	private String userName;
-	private Timestamp userBirth;
+	private String userBirth;
 	private String userId;
 	private String userPassword;
-	private Timestamp userInsDate;
-	private Timestamp userUdtDate;
+	private String userInsDate;
+	private String userUdtDate;
 	private String userDelYn;
 	private String userTypeAs;
 	private String userEmail;
 	private String userPhone;
 	private String userAddress;
 	private String userProfile;
+
 	private String dptSeq;
 	private String userGenderMw;
 	private int userGrade;
+	private String dptName;
 	
 	public UserVO(){}
 
-	public UserVO(int userSeq, String userName, Timestamp userBirth, String userId, String userPassword,
-			Timestamp userInsDate, Timestamp userUdtDate, String userDelYn, String userTypeAs, String userEmail,
-			String userPhone, String userAddress, String userProfile, String dptSeq, String userGenderMw,
-			int userGrade) {
+	public UserVO(int userSeq, String userName, String userBirth, String userId, String userPassword,
+			String userInsDate, String userUdtDate, String userDelYn, String userTypeAs, String userEmail,
+			String userPhone, String userAddress, String userProfile, String dptSeq, String userGenderMw, int userGrade,
+			String dptName) {
 		super();
 		this.userSeq = userSeq;
 		this.userName = userName;
@@ -52,6 +54,15 @@ public class UserVO implements UserDetails{
 		this.dptSeq = dptSeq;
 		this.userGenderMw = userGenderMw;
 		this.userGrade = userGrade;
+		this.dptName = dptName;
+	}
+
+	public String getDptName() {
+		return dptName;
+	}
+
+	public void setDptName(String dptName) {
+		this.dptName = dptName;
 	}
 
 	public int getUserSeq() {
@@ -70,14 +81,6 @@ public class UserVO implements UserDetails{
 		this.userName = userName;
 	}
 
-	public Timestamp getUserBirth() {
-		return userBirth;
-	}
-
-	public void setUserBirth(Timestamp userBirth) {
-		this.userBirth = userBirth;
-	}
-
 	public String getUserId() {
 		return userId;
 	}
@@ -92,22 +95,6 @@ public class UserVO implements UserDetails{
 
 	public void setUserPassword(String userPassword) {
 		this.userPassword = userPassword;
-	}
-
-	public Timestamp getUserInsDate() {
-		return userInsDate;
-	}
-
-	public void setUserInsDate(Timestamp userInsDate) {
-		this.userInsDate = userInsDate;
-	}
-
-	public Timestamp getUserUdtDate() {
-		return userUdtDate;
-	}
-
-	public void setUserUdtDate(Timestamp userUdtDate) {
-		this.userUdtDate = userUdtDate;
 	}
 
 	public String getUserDelYn() {
@@ -170,6 +157,30 @@ public class UserVO implements UserDetails{
 		return userGenderMw;
 	}
 
+	public String getUserBirth() {
+		return userBirth;
+	}
+
+	public void setUserBirth(String userBirth) {
+		this.userBirth = userBirth;
+	}
+
+	public String getUserInsDate() {
+		return userInsDate;
+	}
+
+	public void setUserInsDate(String userInsDate) {
+		this.userInsDate = userInsDate;
+	}
+
+	public String getUserUdtDate() {
+		return userUdtDate;
+	}
+
+	public void setUserUdtDate(String userUdtDate) {
+		this.userUdtDate = userUdtDate;
+	}
+
 	public void setUserGenderMw(String userGenderMw) {
 		this.userGenderMw = userGenderMw;
 	}
@@ -188,7 +199,8 @@ public class UserVO implements UserDetails{
 				+ userId + ", userPassword=" + userPassword + ", userInsDate=" + userInsDate + ", userUdtDate="
 				+ userUdtDate + ", userDelYn=" + userDelYn + ", userTypeAs=" + userTypeAs + ", userEmail=" + userEmail
 				+ ", userPhone=" + userPhone + ", userAddress=" + userAddress + ", userProfile=" + userProfile
-				+ ", dptSeq=" + dptSeq + ", userGenderMw=" + userGenderMw + ", userGrade=" + userGrade + "]";
+				+ ", dptSeq=" + dptSeq + ", userGenderMw=" + userGenderMw + ", userGrade=" + userGrade + ", dptName="
+				+ dptName + "]";
 	}
 
 	@Override
