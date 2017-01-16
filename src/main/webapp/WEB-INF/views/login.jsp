@@ -12,16 +12,8 @@
 		<link href='<c:url value="/assets/css/bootstrap-drawer.min.css"/>' rel="stylesheet">
 		
 <script>
-
 	
 	$(document).on('click','.submit',function(){
-		
-		alert("ddd");
-		alert($('#inputId').val());
-		alert($('#inputPassword').val());
-		
-
-		
 		
 		$.ajax({
 			url : '/logincheck' ,
@@ -36,12 +28,8 @@
 		})
 	});
 	
-	
+</script>	
 
-
-</script>
-		
-		
 </head>
 <body>
 <div class="container">
