@@ -36,7 +36,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler{
 		HttpSession session = request.getSession();
 		session.setAttribute("userVo",userVo);
 
-		ResponseUtils.jsonResponse(response, new CommonResponseVO(1, null));
+		ResponseUtils.jsonResponse(response, new CommonResponseVO(CommonResponseVO.RESPONSE_CODE_SUCCESS, userVo));
 	}
 
 }

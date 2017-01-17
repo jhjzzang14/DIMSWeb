@@ -22,7 +22,7 @@ public class LoginFailHandler implements AuthenticationFailureHandler{
 	public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException e) throws IOException, ServletException {
 		logger.info("login fail");
 		
-		ResponseUtils.jsonResponse(response, new CommonResponseVO(-1, null));
+		ResponseUtils.jsonResponse(response, new CommonResponseVO(CommonResponseVO.RESPONSE_CODE_FAIL));
 	}
 
 }

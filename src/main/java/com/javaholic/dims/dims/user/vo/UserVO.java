@@ -31,12 +31,15 @@ public class UserVO implements UserDetails{
 	private int userGrade;
 	private String dptName;
 	
+	private String userAuthYn;
+	private String userAuthKey;
+	
 	public UserVO(){}
 
 	public UserVO(int userSeq, String userName, String userBirth, String userId, String userPassword,
 			String userInsDate, String userUdtDate, String userDelYn, String userTypeAs, String userEmail,
 			String userPhone, String userAddress, String userProfile, String dptSeq, String userGenderMw, int userGrade,
-			String dptName) {
+			String dptName, String userAuthYn, String userAuthKey) {
 		super();
 		this.userSeq = userSeq;
 		this.userName = userName;
@@ -55,6 +58,24 @@ public class UserVO implements UserDetails{
 		this.userGenderMw = userGenderMw;
 		this.userGrade = userGrade;
 		this.dptName = dptName;
+		this.userAuthYn = userAuthYn;
+		this.userAuthKey = userAuthKey;
+	}
+
+	public String getUserAuthYn() {
+		return userAuthYn;
+	}
+
+	public void setUserAuthYn(String userAuthYn) {
+		this.userAuthYn = userAuthYn;
+	}
+
+	public String getUserAuthKey() {
+		return userAuthKey;
+	}
+
+	public void setUserAuthKey(String userAuthKey) {
+		this.userAuthKey = userAuthKey;
 	}
 
 	public String getDptName() {

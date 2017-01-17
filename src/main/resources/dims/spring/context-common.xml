@@ -19,5 +19,12 @@
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 	</context:component-scan>
 
+	<!-- MailTemplate -->
+	<bean class="com.javaholic.dims.dims.utils.MailTemplate">
+		<property name="host" value="smtp.gmail.com"/>
+		<property name="port" value="587"/>
+		<property name="username" value="dlgusrb0808@gmail.com"/>
+		<property name="password" value="cjsrn1992"/>
+	</bean>
 		
 </beans>

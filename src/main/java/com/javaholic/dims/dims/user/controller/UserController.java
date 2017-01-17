@@ -1,5 +1,6 @@
 package com.javaholic.dims.dims.user.controller;
 
+import javax.mail.MessagingException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -59,10 +60,12 @@ public class UserController {
 	
 	@RequestMapping(value="/user/register", method=RequestMethod.POST)
 	@ResponseBody
-	public CommonResponseVO register(UserVO user) {
-		CommonResponseVO vo = new CommonResponseVO();
-		vo.setCode(CommonResponseVO.RESPONSE_CODE_SUCCESS);
-		return vo;
+	public CommonResponseVO register(UserVO user) throws MessagingException {
+		logger.info("{}",user);
+		
+		userService.registUser(user);
+		
+		return new CommonResponseVO(CommonResponseVO.RESPONSE_CODE_SUCCESS);
 	}
 	
 	

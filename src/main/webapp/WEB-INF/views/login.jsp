@@ -24,10 +24,9 @@
 			success : function(data){
 				console.dir(data);
 				
-				var code = data.code;
 				var vo = data.responseVo;
 				
-				if(code==1)
+				if(data.code)
 				{
 					location.href = '/home';
 				}

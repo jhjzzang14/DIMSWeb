@@ -5,7 +5,20 @@
 <mapper namespace="com.javaholic.dims.dims.user.dao.UserDAO">
 	
 	<insert id="insert" parameterType="UserVO">
-		
+		INSERT INTO DIMS_USER(
+								USER_ID,
+								USER_PASSWORD,
+								USER_TYPE_AS,
+								USER_EMAIL,
+								USER_AUTH_KEY
+							 )
+					VALUES   (
+								#{userId},
+								#{userPassword},
+								#{userTypeAs},
+								#{userEmail},
+								#{userAuthKey}
+							 )
 	</insert>
 	
 	
@@ -23,6 +36,8 @@
 			   U.USER_PROFILE,
 			   U.USER_GENDER_MW,
 			   U.USER_GRADE,
+			   U.USER_AUTH_YN,
+			   U.USER_AUTH_KEY,
 			   D.DPT_NAME
 		  FROM DIMS_USER AS U
 	 LEFT JOIN DIMS_DEPARTMENT D
