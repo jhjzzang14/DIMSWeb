@@ -26,6 +26,7 @@
 		authentication-success-handler-ref="loginSuccessHandler"
 		authentication-failure-handler-ref="loginFailHandler"
 		login-processing-url="/logincheck"/>
+		<sec:remember-me token-validity-seconds="-1"/>
 		<sec:logout/> 
 	</sec:http>
 	

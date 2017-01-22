@@ -46,5 +46,41 @@
 		   AND USER_ID = #{userId}
 	</select>
 	
+	<update id="update" parameterType="UserVO">
+		UPDATE DIMS_USER
+		<set>
+			<if test="userName != null">
+			USER_NAME = #{userName},
+			</if>
+			<if test="userBirth != null">
+			USER_BIRTH = #{userBirth},
+			</if>
+			<if test="userDelYn != null">
+			USER_DEL_YN = #{userDelYn},
+			</if>
+			<if test="userPhone != null">
+			USER_PHONE = #{userPhone},
+			</if>
+			<if test="userProfile != null">
+			USER_PROFILE = #{userProfile},
+			</if>
+			<if test="dptSeq != 0">
+			DPT_SEQ = #{dptSeq},
+			</if>
+			<if test="userGenderMw != null">
+			USER_GENDER_MW = #{userGenderMw},
+			</if>
+			<if test="userGrade != 0">
+			USER_GRADE = #{userGrade},
+			</if>
+			<if test="userAuthYn != null">
+			USER_AUTH_YN = #{userAuthYn},
+			</if>
+			<if test="userAuthKey != null">
+			USER_AUTH_KEY = #{userAuthKey},
+			</if>
+		</set>
+		WHERE USER_SEQ = #{userSeq}
+	</update>
 	
 </mapper>

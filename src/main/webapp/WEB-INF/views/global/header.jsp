@@ -170,6 +170,7 @@
                         <ul class="dropdown-menu dm-icon pull-right">
                             <li>
                                 <a data-action="fullscreen" href=""><i class="md md-fullscreen"></i> 전체화면 모드</a>
+                                <a href="/j_spring_security_logout"><i class="md md-exit-to-app"></i>로그아웃</a>
                             </li>
                         </ul>
                     </li>

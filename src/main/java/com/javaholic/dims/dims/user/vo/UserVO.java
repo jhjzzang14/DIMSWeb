@@ -27,7 +27,7 @@ public class UserVO implements UserDetails{
 	private String userAddress;
 	private String userProfile;
 
-	private String dptSeq;
+	private int dptSeq;
 	private String userGenderMw;
 	private int userGrade;
 	private String dptName;
@@ -39,7 +39,7 @@ public class UserVO implements UserDetails{
 
 	public UserVO(int userSeq, String userName, String userBirth, String userId, String userPassword,
 			String userInsDate, String userUdtDate, String userDelYn, String userTypeAs, String userEmail,
-			String userPhone, String userAddress, String userProfile, String dptSeq, String userGenderMw, int userGrade,
+			String userPhone, String userAddress, String userProfile, int dptSeq, String userGenderMw, int userGrade,
 			String dptName, String userAuthYn, String userAuthKey) {
 		super();
 		this.userSeq = userSeq;
@@ -167,11 +167,11 @@ public class UserVO implements UserDetails{
 		this.userProfile = userProfile;
 	}
 
-	public String getDptSeq() {
+	public int getDptSeq() {
 		return dptSeq;
 	}
 
-	public void setDptSeq(String dptSeq) {
+	public void setDptSeq(int dptSeq) {
 		this.dptSeq = dptSeq;
 	}
 

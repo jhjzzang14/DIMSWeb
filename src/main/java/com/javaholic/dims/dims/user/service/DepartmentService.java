@@ -10,13 +10,12 @@ import com.javaholic.dims.dims.user.vo.DepartmentVO;
 
 @Service
 public class DepartmentService {
-	
+
 	@Autowired
 	private DepartmentDAO dptDao;
 
 	public List<DepartmentVO> getDepartments() {
 		return dptDao.select();
 	}
-	
-	
+
 }

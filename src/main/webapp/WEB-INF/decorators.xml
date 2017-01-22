@@ -13,6 +13,8 @@
     
     <decorator name="aside-left" page="global/aside-left.jsp"/>
     
+    <decorator name="aside-right" page="global/aside-right.jsp"/>
+    
     <decorator name="header" page="global/header.jsp" />
     
     <decorator name="footer" page="global/footer.jsp" />     

@@ -11,4 +11,6 @@ public interface UserDAO {
 	
 	public UserVO selectUserInfo(String userId);
 	
+	public void update(UserVO user);
+	
 }

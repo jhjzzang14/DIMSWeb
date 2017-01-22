@@ -25,7 +25,9 @@
 		<page:applyDecorator name="header"/>
 		
 		<page:applyDecorator name="aside-left"/>
-
+		
+		<page:applyDecorator name="aside-right"/>
+		
 		<div class="container">
 			<decorator:body/>
 		</div>
