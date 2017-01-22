@@ -55,7 +55,6 @@ public class UserController {
 	@RequestMapping(value="/user/register", method=RequestMethod.GET)
 	public ModelAndView openRegister() {
 		ModelAndView mv = new ModelAndView("register");
-		dptService.getDepartments();
 		return mv;
 	}
 	
