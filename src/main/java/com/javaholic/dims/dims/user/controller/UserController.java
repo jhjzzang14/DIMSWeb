@@ -8,11 +8,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.javaholic.dims.common.LogManager;
 import com.javaholic.dims.common.vo.CommonResponseVO;
 import com.javaholic.dims.dims.user.service.DepartmentService;
 import com.javaholic.dims.dims.user.service.UserService;
@@ -21,9 +23,6 @@ import com.javaholic.dims.dims.user.vo.UserVO;
 
 @Controller
 public class UserController {
-
-	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
-	
 	@Autowired
 	private UserService userService;
 	
@@ -34,7 +33,7 @@ public class UserController {
 	@RequestMapping("/login/test")
 	@ResponseBody
 	public CommonResponseVO loginTest(HttpSession session, HttpServletRequest request) {
-		logger.info("{}", request.getHeader("Set-Cookie"));
+		LogManager.logInfo("{}", request.getHeader("Set-Cookie"));
 		
 		CommonResponseVO vo = new CommonResponseVO();
 		
@@ -47,7 +46,7 @@ public class UserController {
 		}
 		else
 		{
-			logger.info("");
+			LogManager.logInfo("");
 			return vo;
 		}
 	}
@@ -61,13 +60,11 @@ public class UserController {
 	@RequestMapping(value="/user/register", method=RequestMethod.POST)
 	@ResponseBody
 	public CommonResponseVO register(UserVO user) throws MessagingException {
-		logger.info("{}",user);
+		LogManager.logInfo("{}",user);
 		
 		userService.registUser(user);
 		
 		return new CommonResponseVO(CommonResponseVO.RESPONSE_CODE_SUCCESS);
 	}
-	
-	
 	
 }
