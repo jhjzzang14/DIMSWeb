@@ -15,7 +15,7 @@
         <link href="<c:url value="/assets/css/app.min.2.css"/>" rel="stylesheet">
 		<script src="<c:url value="/assets/js/jquery-2.1.1.min.js"/>"></script>
 		<link href="<c:url value="/assets/vendors/animate-css/animate.min.css"/>" rel="stylesheet">
-        <link href="<c:url value="/assets/vendors/sweet-alert/sweet-alert.min.css"/>" rel="stylesheet">
+        <link href="<c:url value="/assets/vendors/sweetalert2/sweetalert2.min.css"/>" rel="stylesheet">
         <link href="<c:url value="/assets/vendors/material-icons/material-design-iconic-font.less"/>" rel="stylesheet/less">
 		<script src="<c:url value="/assets/js/less.min.js"/>"></script>
 	</head>
@@ -23,10 +23,13 @@
 	
 	<body>
 		<page:applyDecorator name="header"/>
+		
 		<page:applyDecorator name="aside-left"/>
+
 		<div class="container">
 			<decorator:body/>
 		</div>
+		
 		<page:applyDecorator name="footer"/>		
 	</body>
 </html>

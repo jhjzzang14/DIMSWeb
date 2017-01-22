@@ -18,7 +18,7 @@
     <script src="<c:url value="/assets/vendors/nicescroll/jquery.nicescroll.min.js"/>"></script>
     <script src="<c:url value="/assets/vendors/waves/waves.min.js"/>"></script>
     <script src="<c:url value="/assets/vendors/bootstrap-growl/bootstrap-growl.min.js"/>"></script>
-    <script src="<c:url value="/assets/vendors/sweet-alert/sweet-alert.min.js"/>"></script>
+    <script src="<c:url value="/assets/vendors/sweetalert2/sweetalert2.min.js"/>"></script>
     
     <script src="<c:url value="/assets/js/flot-charts/curved-line-chart.js"/>"></script>
     <script src="<c:url value="/assets/js/flot-charts/line-chart.js"/>"></script>
