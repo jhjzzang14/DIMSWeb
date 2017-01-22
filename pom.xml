@@ -13,6 +13,7 @@
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.7.10</org.slf4j-version>
 		<spring-framework.security.version>3.2.9.RELEASE</spring-framework.security.version>
+		<org.springframework.mobile.version>4.3.4.RELEASE</org.springframework.mobile.version>
 	</properties>
 	<dependencies>
 		<!-- Spring -->
@@ -196,7 +197,12 @@
 		<version>${spring-framework.security.version}</version>
 	  </dependency>
       
-      
+      <!-- Device Util -->
+      <dependency>
+      	<groupId>org.springframework.mobile</groupId>
+      	<artifactId>spring-mobile-device</artifactId>
+      	<version>1.1.4.RELEASE</version>
+      </dependency>
 	</dependencies>
     <build>
         <plugins>

@@ -35,8 +35,16 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler{
 		
 		HttpSession session = request.getSession();
 		session.setAttribute("userVo",userVo);
-
-		ResponseUtils.jsonResponse(response, new CommonResponseVO(CommonResponseVO.RESPONSE_CODE_SUCCESS, userVo));
+		
+		if(userVo.getUserAuthYn().equals("N"))
+		{
+			ResponseUtils.jsonResponse(response, new CommonResponseVO(CommonResponseVO.RESPONSE_CODE_PERMISSION_FAIL, null));
+			return;
+		}
+		else
+		{
+			ResponseUtils.jsonResponse(response, new CommonResponseVO(CommonResponseVO.RESPONSE_CODE_SUCCESS, null));
+		}
 	}
 
 }

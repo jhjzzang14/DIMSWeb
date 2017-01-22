@@ -5,6 +5,8 @@ public class CommonResponseVO {
 	public static final int RESPONSE_CODE_SUCCESS = 1;
 	public static final int RESPONSE_CODE_FAIL = 0;
 	
+	public static final int RESPONSE_CODE_PERMISSION_FAIL = 2;
+	
 	private int code;
 	private Object responseVO;
 	

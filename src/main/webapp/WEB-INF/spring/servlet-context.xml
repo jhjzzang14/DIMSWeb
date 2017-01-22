@@ -7,6 +7,21 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<!-- Interceptors -->	
+	<interceptors>
+		<beans:bean class="org.springframework.mobile.device.DeviceResolverHandlerInterceptor"/>
+		<interceptor>
+			<mapping path="/**"/>
+			<exclude-mapping path="/login"/>
+			<exclude-mapping path="/auth"/>
+			<exclude-mapping path="/user/register"/>
+			<exclude-mapping path="/assets/**"/>
+			<exclude-mapping path="/img/**"/>
+			<exclude-mapping path="/javascripts/**"/>
+			<beans:bean class="com.javaholic.dims.common.interceptor.AuthChekingInterceptor"/>
+		</interceptor>
+	</interceptors>
+	
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
 	
 	<!-- Enables the Spring MVC @Controller programming model -->

@@ -17,12 +17,12 @@
 		<c:otherwise>
 			<c:if test="${userVo.userAuthYn eq 'N'}">
 			<label>인증번호</label>
-			<input type="text" name="userAuthKey" class="form-control"/>
+				<input type="text" name="userAuthKey" class="form-control"/>
 			</c:if>
 			<c:if test="${userVo.userAuthYn eq 'Y'}">
-			학번 ${userVo.userId} <br/>
-			이름 ${userVo.userName} <br/>
-			학과 ${userVo.dptName} <br/>
+				학번 ${userVo.userId} <br/>
+				이름 ${userVo.userName} <br/>
+				학과 ${userVo.dptName} <br/>
 			</c:if>
 		</c:otherwise>
 	</c:choose>

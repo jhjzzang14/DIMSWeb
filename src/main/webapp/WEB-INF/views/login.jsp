@@ -10,7 +10,7 @@
 		<link href="<c:url value="/assets/css/login/login.css"/>" rel="stylesheet">
 		<link href="<c:url value="/assets/css/bootstrap.min.css"/>" rel="stylesheet">
 		<link href='<c:url value="/assets/css/bootstrap-drawer.min.css"/>' rel="stylesheet">
-		<link href="<c:url value="/assets/vendors/sweet-alert/sweet-alert.min.css"/>" rel="stylesheet">
+		<link href="<c:url value="/assets/vendors/sweetalert2/sweetalert2.min.css"/>" rel="stylesheet">
 		
 <script>
 	
@@ -68,6 +68,6 @@
 			</a>
 		</div><!-- /card-container -->
 </div><!-- /container -->
-<script src="<c:url value="/assets/vendors/sweet-alert/sweet-alert.min.js"/>"></script>
+<script src="<c:url value="/assets/vendors/sweetalert2/sweetalert2.min.js"/>"></script>
 </body>
 </html>

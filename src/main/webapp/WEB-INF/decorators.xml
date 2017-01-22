@@ -3,6 +3,7 @@
 	<excludes>
 		<pattern>/user/register</pattern>
 		<pattern>/login</pattern>
+		<pattern>/auth</pattern>
 		<pattern>/mobile/*</pattern>
     </excludes>
     

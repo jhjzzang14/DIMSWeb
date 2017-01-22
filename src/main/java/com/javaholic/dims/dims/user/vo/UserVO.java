@@ -1,6 +1,5 @@
 package com.javaholic.dims.dims.user.vo;
 
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -12,6 +11,8 @@ import com.javaholic.dims.common.security.Authority;
 
 public class UserVO implements UserDetails{
 	
+	private static final long serialVersionUID = 1L;
+
 	private int userSeq;
 	private String userName;
 	private String userBirth;
