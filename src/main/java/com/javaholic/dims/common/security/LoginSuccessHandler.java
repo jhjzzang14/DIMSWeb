@@ -15,21 +15,20 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.javaholic.dims.common.LogManager;
 import com.javaholic.dims.common.vo.CommonResponseVO;
 import com.javaholic.dims.dims.user.dao.UserDAO;
 import com.javaholic.dims.dims.user.vo.UserVO;
 import com.javaholic.dims.dims.utils.ResponseUtils;
 
 public class LoginSuccessHandler implements AuthenticationSuccessHandler{
-
-	Logger logger = LoggerFactory.getLogger(LoginSuccessHandler.class);
 	
 	@Autowired UserDAO userDAO;
 	
 	@ResponseBody
 	@Override
 	public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authUser) throws IOException, ServletException {
-		logger.info("login Seccess");
+		LogManager.logInfo("login Seccess");
 		
 		UserVO userVo = userDAO.selectUserInfo(authUser.getName());
 		

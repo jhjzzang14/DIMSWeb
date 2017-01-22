@@ -15,8 +15,6 @@ import com.javaholic.dims.dims.utils.ResponseUtils;
 
 public class AuthChekingInterceptor extends HandlerInterceptorAdapter {
 	
-	private static final Logger logger = LoggerFactory.getLogger(AuthChekingInterceptor.class);
-	
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 		/* Auth check에 걸리는 요청은 무조건 Session에 객체가 있다는 가정 하에 */

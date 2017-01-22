@@ -6,7 +6,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title> ▒ DIMS Web JavaHolic co.ltd,. ▒ </title>
+<script src="<c:url value="/assets/js/jquery-2.1.1.min.js"/>"></script>
+
+<script>
+
+</script>
 </head>
 <body>
 	<c:choose>

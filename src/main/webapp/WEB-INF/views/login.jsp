@@ -53,8 +53,8 @@
 			<p id="profile-name" class="profile-name-card"></p>
 			<form class="form-signin"  method="post">
 				<span id="reauth-email" class="reauth-email"></span>
-				<input type="text" id="inputId" name="userId" class="form-control" placeholder="학번을 입력하여주세요." required autofocus>
-				<input type="password" id="inputPassword" name ="userPassword"class="form-control" placeholder="비밀번호를 입력하여주세요." required>
+				<input type="text" name="userId" class="form-control" placeholder="학번을 입력하여주세요." required autofocus >
+				<input type="password"  name ="userPassword" class="form-control" placeholder="비밀번호를 입력하여주세요." style="height: 31px;" required>
 				<div id="remember" class="checkbox">
 					<label>
 						<input type="checkbox" value="remember-me"> Remember me

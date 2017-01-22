@@ -11,16 +11,15 @@ import org.slf4j.LoggerFactory;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 
+import com.javaholic.dims.common.LogManager;
 import com.javaholic.dims.common.vo.CommonResponseVO;
 import com.javaholic.dims.dims.utils.ResponseUtils;
 
 public class LoginFailHandler implements AuthenticationFailureHandler{
-
-	Logger logger = LoggerFactory.getLogger(LoginFailHandler.class);
 	
 	@Override
 	public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException e) throws IOException, ServletException {
-		logger.info("login fail");
+		LogManager.logInfo("login fail");
 		
 		ResponseUtils.jsonResponse(response, new CommonResponseVO(CommonResponseVO.RESPONSE_CODE_FAIL));
 	}
