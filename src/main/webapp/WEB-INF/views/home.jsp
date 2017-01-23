@@ -14,76 +14,77 @@
 		</c:when>
 		<c:otherwise>
 			<div align="center">
-				<div class=card style="width: 850px;">
-					<div class="card-header">
-						<h2>기숙사입사신청서</h2>
+				<div class="content" style="width: 70%;">
+					<div class="page-header" align="left">
+						
 					</div>
-					<div class="card-body card-padding" style="width: 850px">
-						<form>
-							<div class="pull-left"
-								style="width: 125px; height: 150px; border: 1px solid black;">
-								<img class="lv-img-sm"
-									src=<c:url value="assets/img/profile-pics/4.jpg"/> alt="">
+					<div class="card">
+						<div class="card-header">
+							<h2>기숙사 입사 신청서</h2>
+						</div>
+						<div class="card-body card-padding">
+							<div class="pull-left" style="margin-right: 20px;">
+								<div>
+									<img src="<c:url value="/img/noimage.jpg"/>" id="profile_preview" style="width: 160px; height: 190px;">
+								</div>
+								<div class="fileinput fileinput-new" data-provides="fileinput">
+									<span class="btn btn-primary btn-file waves-effect waves-button waves-float" style="width: 160px;">
+										<span class="fileinput-new">선택</span>
+										<span class="fileinput-exists">Change</span>
+											<input type="file" name="userProfile">
+									</span>	
+								</div>
 							</div>
-							<div class="pull-right"
-								style="width: 673px; height: 160px; border: 1px solid black;">
-								<div class="form-group">
-									<div class="fg-line">
-										<input type="text" class="form-control input-lg"
-											placeholder="이름" name="userName">
+							<div class="pull-left" style="width: 75%;">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="input-group">
+											<span class="input-group-addon"> <i
+												class="md md-person"></i>
+											</span>
+											<div class="fg-line">
+												<input type="text" class="form-control" placeholder="이름">
+											</div>
+										</div>
 									</div>
-									<br />
-									<div class="fg-line">
-										<input type="text" class="form-control input-lg"
-											placeholder="연락처" name="userPhone">
+									<div class="col-sm-6">
+										<div class="input-group">
+											<span class="input-group-addon"> <i class="md md-event"></i>
+											</span>
+											<div class="dtp-container dropdown fg-line">
+												<input type='text' class="form-control date-picker"
+													data-toggle="dropdown" placeholder="생년월일">
+											</div>
+										</div>
 									</div>
-									<div class="fg-line">
-										<input type="text" class="form-control input-lg"
-											placeholder="주소" name="userAdress">
+									<div class="col-sm-6">
+										<div class="input-group">
+											<span class="input-group-addon"> <i
+												class="md md-phone"></i>
+											</span>
+											<div class="fg-line">
+												<input type="text" class="form-control" placeholder="연락처">
+											</div>
+										</div>
 									</div>
-									<div class="fg-line">
-										<div class="select pull-left"
-											style="width: 50%; border: 1px solid black;">
+									<div class="col-sm-6">
+									<div class="input-group">
+										<span class="input-group-addon"> <i
+												class="md md-phone"></i>
+											</span>
+										<div class="fg-inline select">
 											<select class="form-control">
-												<option>학년</option>
-												<option>1학년</option>
-												<option>2학년</option>
-												<option>3학년</option>
-												<option>4학년</option>
-												<option>5학년</option>
+												<option>남자</option>
+												<option>여자</option>
 											</select>
 										</div>
-										<div class="pull-right"
-											style="width: 50%; height: 36px; padding-top: 7px; border: 1px solid black;">
-											성별 <label class="radio radio-inline m-r-20"> <input
-												type="radio" name="inlineRadioOptions" value="man">
-												<i class="input-helper"></i> 남자
-											</label> <label class="radio radio-inline m-r-20"> <input
-												type="radio" name="inlineRadioOptions" value="woman">
-												<i class="input-helper"></i> 여자
-											</label>
-										</div>
+									</div>
 									</div>
 								</div>
+	
 							</div>
-							<div class="pull-left"
-								style="width: 125px; border: 1px solid black;">
-								<input type="button" class="btn btn-primary btn-sm m-t"
-									value="사진첨부" />
-							</div>
-							<div style="border: 1px solid black">
-								<div class="form-group">
-									<div class="fg-line">
-										<textarea class="form-control auto-size" placeholder="특이사항"></textarea>
-									</div>
-								</div>
-							</div>
-
-							<div class="pull-right">
-								<input type="button" value="작성완료" />
-							</div>
-
-						</form>
+							<div class="clearfix"></div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -91,19 +92,25 @@
 	</c:choose>
 	<script type="text/javascript">
 		$(document).ready(function() {
-			if ('${userVo.userAuthYn}' == 'N') {
-				$.growl({
-					message : '이메일 인증을 완료해주세요!'
-				}, {
-					element : 'body',
-					type : 'danger',
-					offset : {
-						x : 20,
-						y : 85
+			$(document).on('change', 'input[name="userProfile"]', function() {
+				var input = this;
+				if (input.files && input.files[0]) {
+					var reader = new FileReader();
+	
+					reader.onload = function(e) {
+						$('#profile_preview').attr('src', e.target.result);
+						$('#profile_preview').css('width', '160px');
+						$('#profile_preview').css('height', '190px');
 					}
-				});
-			}
+	
+					reader.readAsDataURL(input.files[0]);
+				}
+			})
 		})
 	</script>
+	<script type="text/javascript"
+		src="<c:url value="/assets/vendors/moment/moment.min.js"/>"></script>
+	<script type="text/javascript"
+		src="<c:url value="/assets/vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"/>"></script>
 </body>
 </html>
